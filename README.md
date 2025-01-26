@@ -8,9 +8,9 @@ This code is based on a tutorial found [here](https://www.datacamp.com/tutorial/
 
 The original tutorial was written by Ryan Ong and you can find him on x [here](https://x.com/Ryan_Ong10). 
 
-His substack is [here](https://ryanocm.substack.com/.)
+His substack is [here](https://ryanocm.substack.com/).
 
-This RAG uses Langchain, Ollama & Llama 3.1 8B
+This RAG uses Langchain, Ollama & Llama 3.1 8B.
 
 The websites used in this app come from [Lilian Weng's](https://lilianweng.github.io/) website. 
 
@@ -22,6 +22,7 @@ Differences between this app and the tutorial:
 - This app uses [SentenceTransformers](https://sbert.net/) to create the embeddings instead of the OpenAI api. SentenceTransformers is free.
 
 Python version: 3.9
+
 Package manager: conda
 
 ## To Run
