@@ -26,8 +26,8 @@ prompt = PromptTemplate(
 
 # Initialize the LLM with Llama 3.1 model
 llm = ChatOllama(
-    model="llama3.1",  # Specify the Llama model to use
-    temperature=0,     # Set temperature to 0 for deterministic responses
+    model="llama3.1",  
+    temperature=0,     
 )
 
 # Combine the prompt and the LLM into a single chain
@@ -83,6 +83,16 @@ if __name__ == "__main__":
     # Run the RAG application
     answer = rag_application.run(question)
 
+    question2 = "What are types of attacks on LLMs?"
+    answer2 = rag_application.run(question2)
+
+    question3 = "What is the square root of pi?"
+    answer3 = rag_application.run(question3)
+
     # Print the result
     print("Question:", question)
     print("Answer:", answer)
+    print("Question2:", question2)
+    print("Answer2:", answer2)
+    print("Question3:", question3)
+    print("Answer3:", answer3)
