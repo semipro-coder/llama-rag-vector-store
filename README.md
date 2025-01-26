@@ -40,8 +40,7 @@ python llama_rag.py
 The output in your terminal will look something like this:
 ```
 python llama_rag.py
-USER_AGENT environment variable not set, consider setting it to identify your requests.
-Batches: 100%|███████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 10.00it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 10.22it/s]
 Question: What is prompt engineering?
 Answer: Prompt engineering refers to methods for communicating with Large Language Models (LLMs) to steer their behavior towards desired outcomes without updating the model weights. It's an empirical science that requires experimentation and heuristics, aiming for alignment and model steerability. The goal is to optimize believability in a given context.
 ```

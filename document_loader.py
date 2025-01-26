@@ -1,7 +1,4 @@
 # document_loader.py
-
-from langchain_community.document_loaders import WebBaseLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
 from dotenv import load_dotenv
 import os
 
@@ -10,7 +7,8 @@ load_dotenv(dotenv_path=".env")  # Specify the exact path to the .env file
 user_agent = os.getenv("USER_AGENT")
 os.environ["USER_AGENT"] = user_agent
 
-
+from langchain_community.document_loaders import WebBaseLoader
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 def load_and_split_documents(urls):
     """
