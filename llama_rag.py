@@ -1,4 +1,6 @@
-# llama_rag.py
+"""
+llama_rag.py
+"""
 
 from langchain_ollama import ChatOllama
 from langchain.prompts import PromptTemplate
@@ -10,8 +12,9 @@ import os
 
 load_dotenv() 
 
-
-# Define the prompt template for the language model
+"""
+Define the prompt template for the language model
+"""
 prompt = PromptTemplate(
     template="""You are an assistant for question-answering tasks.
     Use the following documents to answer the question.
@@ -24,18 +27,23 @@ prompt = PromptTemplate(
     input_variables=["question", "documents"],
 )
 
-# Initialize the LLM with Llama 3.1 model
+"""
+Initialize the LLM with Llama 3.1 model
+"""
 llm = ChatOllama(
     model="llama3.1",  
     temperature=0,     
 )
 
-# Combine the prompt and the LLM into a single chain
+"""
+Combine the prompt and the LLM into a single chain
+"""
 rag_chain = prompt | llm | StrOutputParser()
 
 class RAGApplication:
     """
-    RAG (Retrieval-Augmented Generation) application for question-answering tasks.
+    RAG (Retrieval-Augmented Generation) application 
+    for question-answering tasks.
     """
     def __init__(self, retriever, rag_chain):
         self.retriever = retriever
@@ -43,7 +51,8 @@ class RAGApplication:
 
     def run(self, question):
         """
-        Answers a question using retrieved documents and the language model.
+        Answers a question using retrieved 
+        documents and the language model.
 
         Args:
             question (str): The question to answer.
